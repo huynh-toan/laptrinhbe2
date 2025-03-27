@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách User - Lập trình web</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="header">Home | Đăng xuất</div>
+    
+    <div class="main-content">
+        <div class="table-container">
+            <h2>Danh sách user</h2>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <tr>
+                        <td>1</td>
+                        <td>UPVH</td>
+                        <td>ATIW@gmail.com</td>
+                        <td>
+                            <a href="user-details.html">Edit</a> | 
+                            <a href="#">View</a> | 
+                            <a href="#" class="delete-user">Delete</a>
+                        </td>
+                    </tr>
+                    <!-- More rows will be dynamically added by JavaScript -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button id="prevPage">Previous</button>
+                <span id="pageInfo">Page 1 of 3</span>
+                <button id="nextPage">Next</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">Lập trình web @2024</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
