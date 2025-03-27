@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết User - Lập trình web</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+    <div class="header">Home | Đăng xuất</div>
+    
+    <div class="main-content">
+        <div class="form-container">
+            <h2>Màn hình chi tiết</h2>
+            <form id="userDetailsForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="test1" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="test1@gmail.com" readonly>
+                </div>
+                <button type="button" id="editButton" class="btn">Chỉnh sửa</button>
+                <button type="submit" id="saveButton" class="btn" style="display:none;">Lưu</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer">Lập trình web @2024</div>
+
+    <script src="public/js/script.js"></script>
+</body>
+</html>
