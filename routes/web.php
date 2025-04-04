@@ -4,6 +4,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CrudUserController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\LayoutController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +18,7 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('dashboard', [CrudUserController::class, 'dashboard']);
+/*Route::get('dashboard', [CrudUserController::class, 'dashboard']);
 
 Route::get('login', [CrudUserController::class, 'login'])->name('login');
 Route::post('login', [CrudUserController::class, 'authUser'])->name('user.authUser');
@@ -36,4 +39,20 @@ Route::get('signout', [CrudUserController::class, 'signOut'])->name('signout');
 
 Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+Route::get('/register', [LayoutController::class, 'register'])->name('layout.register');
+Route::post('/register', [LayoutController::class, 'postUser'])->name('layout.postRegister');
+
+Route::get('/login', [LayoutController::class, 'login'])->name('layout.login');
+Route::post('/login', [LayoutController::class, 'authUser'])->name('layout.authUser');
+
+Route::get('/list', [LayoutController::class, 'listUsers'])->name('layout.list');
+
+Route::get('/update/{id}', [LayoutController::class, 'update'])->name('user.update');
+Route::post('/update/{id}', [LayoutController::class, 'postUpdate'])->name('user.postUpdate');
+
+Route::get('/view', [LayoutController::class, 'view'])->name('layout.view');
+
+Route::get('/delete/{id}', [LayoutController::class, 'deleteUser'])->name('user.delete');
+Route::get('/signout', [LayoutController::class, 'signout'])->name('layout.signout');

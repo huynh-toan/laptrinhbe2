@@ -146,7 +146,5 @@ class CrudUserController extends Controller
 
         return Redirect('login');
     }
-    public funcion index(){
-        return view('crud_user.index')
-    }
+   
 }
